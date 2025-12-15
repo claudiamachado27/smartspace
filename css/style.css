@@ -1,0 +1,966 @@
+/* Importar fontes e redefinir estilos básicos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Botões */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffffb8;
+    color: #007bff;
+    border: 1px solid #fff;
+}
+
+.btn-link {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-link:hover{
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.btn-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    
+}
+
+.btn-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 50%;
+    
+}
+
+.header .nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-menu a {
+    font-weight: 500;
+    padding-bottom: 5px; 
+    transition: color 0.3s ease;
+    margin-left: 30px;
+    position: relative; 
+}
+
+.header .nav-menu a:hover,
+.header .nav-menu a.active {
+    color: #007bff;
+}
+
+.header .menu-toggle {
+    display: block; 
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 5%;
+    transform: translateY(-50%);
+    z-index: 100; 
+}
+
+.header .nav-menu {
+    display: none; 
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 99;
+}
+
+.header .nav-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Quando o JS adicionar a classe 'active' ao nav-menu, ele será exibido */
+.header .nav-menu.active {
+    display: flex; 
+    flex-direction: column;
+}
+
+
+
+/* ===== ============== ===== */
+/* ===== PÁGINA INICIAL ===== */
+/* ===== ============== ===== */
+.hero-banner-inicio {
+    color: #fff;
+    padding: 190px 0;
+    text-align: center;
+    background-image: url('../imagens/hero-inicio.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-banner-inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664); 
+}
+
+.hero-banner-inicio .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-banner-inicio h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+} 
+
+.hero-banner-inicio p {
+    margin-bottom: 50px;
+}
+
+.hero-banner-inicio .container {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-banner-inicio .hero-buttons .btn {
+    margin: 0 10px;
+} 
+
+/* Gerais */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p.section-description {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+/* Sessão Cursos*/
+.cursos {
+    background-color: #fff;
+    padding: 80px 0 120px;
+}
+
+.cursos .cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.cursos .cursos-item {
+    background-color: #bedbf751;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.cursos .cursos-item:hover {
+    transform: translateY(-10px);
+}
+
+.cursos .container h2 {
+    text-align: center;
+}
+
+.cursos .cursos-item img {
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.cursos .cursos-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cursos .cursos-item p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Sessão CTA */
+.cta {
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px 0 0;
+}
+
+.cta .cta-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cta .cta-conteudo img {
+    max-width: 400px;
+    height: auto;
+}
+
+.cta .cta-conteudo h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.cta .cta-conteudo p {
+    margin-bottom: 25px;
+    max-width: 550px;
+}
+
+/* Sessão Depoimentos*/
+.depoimentos {
+    background-color: #f0f4f8;
+    padding: 70px 0 120px;
+    text-align: center;
+}
+
+.depoimentos .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.depoimentos .depoimentos-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.depoimentos .depoimentos-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+}
+
+.depoimentos .depoimentos-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.depoimentos .depoimentos-card .estrelas {
+    color: #ffc107; 
+    margin-bottom: 10px;
+}
+
+.depoimentos .depoimentos-card span {
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* ===== ============== ===== */
+/* ===== GERAL PÁGINAS SERVIÇOS, SOBRE NÓS E CONTACTOS ===== */
+/* ===== ============== ===== */
+
+.hero-banner {
+    background-color: #007bff;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    /* background-size: cover;
+    background-position: center;
+    position: relative; */
+}
+
+/* .hero-banner .container {
+    position: relative;
+    z-index: 1;
+} */
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+
+/* ===== ============== ===== */
+/* ===== PÁGINA SOBRE NÓS ===== */
+/* ===== ============== ===== */
+.sobre {
+    padding: 80px 0;
+}
+
+.sobre .sobre-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.sobre .sobre-conteudo img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sobre .sobre-conteudo h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sobre .sobre-conteudo p {
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+/* Sessão Missão, Visão e Valores  */
+.missao {
+    background-color: #fff;
+    padding: 50px 0 120px;
+    text-align: center;
+} 
+
+.missao .missao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.missao .missao-item {
+    background-color: #bedbf751;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.missao .missao-item:hover {
+    transform: translateY(-10px);
+}
+
+.missao .missao-item i {
+    font-size: 3em;
+    padding-bottom: 10px;
+
+}
+
+.missao .missao-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Sessão Equipa*/
+.equipa {
+    background-color: #f0f4f8;
+    text-align: center;
+    padding: 80px 0 120px;
+} 
+
+.equipa .equipa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.equipa .equipa-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.equipa .equipa-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+}
+
+.equipa .equipa-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.equipa .equipa-card .estrelas {
+    color: #ffc107; /* Cor das estrelas */
+    margin-bottom: 10px;
+}
+
+.equipa .equipa-card span {
+    font-weight: 600;
+    color: #333;
+}
+
+.equipa .equipa-card .social-icons a {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+
+/* ===== ============== ===== */
+/* ===== PÁGINA SERVIÇOS ===== */
+/* ===== ============== ===== */
+.nossos-servicos {
+    padding: 80px 0 120px;
+    text-align: center;
+}   
+
+.nossos-servicos .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.nossos-servicos .servicos-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.nossos-servicos .servicos-card:hover {
+    transform: translateY(-10px);
+}
+
+.nossos-servicos .servicos-card .icon-box {
+    background-color: #e6f2ff;
+    color: #007bff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.nossos-servicos .servicos-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.nossos-servicos .servicos-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Sessão dos números */
+.numeros-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.numeros-section .numeros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.numeros-section .numeros-item {
+    text-align: center;
+}
+
+.numeros-section .numeros-item i {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.numeros-section .numeros-item span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.numeros-section .numeros-item p {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* ===== ============== ===== */
+ /* ===== PÁGINA CONTACTOS ===== */
+ /* ===== ============== ===== */
+.contacto-section {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.contacto-section .contacto-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 50px;
+    text-align: left;
+}
+
+.contacto-form h2, .contacto-info h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contacto-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contacto-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contacto-form textarea {
+    resize: vertical;
+}
+
+.contacto-form .btn-primary {
+    width: auto;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.contacto-info .map-container {
+    width: 100%;
+    height: 300px; 
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-info .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contacto-info p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: #555;
+}
+
+
+/* ===== ============== ===== */
+/* ===== FOOTER ===== */
+/* ===== ============== ===== */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer .logo-footer img {
+    width: 70%;
+}
+
+.footer .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.footer .footer-links h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer .footer-links h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.footer .footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-links a {
+    color: #bbb;
+    transition: color 0.3s ease;
+    
+}
+
+.footer .footer-links a:hover {
+    color: #fff;
+    
+}
+
+.footer .social-media a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #3f556b;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.footer .social-media a:hover {
+    background-color: #007bff;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #3f556b;
+}
+
+.footer .footer-bottom p {
+    font-size: 0.9em;
+    color: #bbb;  
+}
+
+/* ===== ============== ===== */
+/* ===== RESPONSIVIDADE ===== */
+/* ===== ============== ===== */
+
+ @media (max-width: 768px) {
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    width: 200px;
+    padding: 1rem;
+    border-top: 2px solid #007bff;
+}
+
+.nav-menu.show {
+    display: flex;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+header {
+    flex-wrap: wrap;
+}
+
+.hero-banner-inicio {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}  
+
+} 
+
+
+/* Media Query para Desktop (Telas acima de 768px) */
+@media (min-width: 768px) {
+    
+.header .menu-toggle {
+    display: none;
+}
+
+.header .nav-menu {
+    display: flex; 
+    position: static; 
+    width: auto;
+    background-color: transparent; 
+    box-shadow: none;
+    padding: 0;
+    align-items: center; 
+    justify-content: flex-end; 
+}
+    
+.header .nav-menu a {
+    border-bottom: none;
+}
+
+
+.header .nav-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.header .nav-menu a:hover::after,
+.header .nav-menu a.active::after {
+    width: 100%;
+} 
+
+.nav-menu {
+    display: none; 
+    cursor: pointer;
+    color: #555;
+}  
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+header {
+    flex-wrap: wrap;
+}
+
+.hero-banner-inicio {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+.hero-banner-inicio {
+    padding: 130px 0 !important;
+}  
+
+.hero-banner h1 {
+    font-size: 2em;
+}
+
+.container {
+     padding: 0 15px; 
+    }
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 1.6em;
+}
+
+.header .logo img {
+    width: 40%;
+}
+
+.cta .cta-conteudo  {
+    padding-bottom: 50px;
+}
+
+.cta .cta-conteudo h2 {
+    font-size: 1.5em;
+}
+
+.cta-conteudo div {
+    text-align: center; 
+    padding: 0; 
+}
+
+.cta .cta-conteudo img {
+    max-width: 300px;
+    height: auto;
+}
+
+.footer-links div{
+    text-align: center;
+}
+
+.footer-links h4::after {
+    display: none !important; 
+}
+.nossos-servicos {
+    padding: 80px 0 80px;
+}
+
+.numeros-section .numeros-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+}
+
+.depoimentos {
+    padding: 70px 0;
+}
+
+.equipa {
+    padding: 80px 0;
+}
+
+.sobre {
+    padding: 70px 0 45px;
+}
+
+.missao  {
+    padding: 1px 0 50px;
+}
+
+.sobre .sobre-conteudo img {
+    max-width: 95%;
+}
+
+.sobre .sobre-conteudo h2 {
+    font-size: 1.5em;
+}
+
+.contacto-section .contacto-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 50px;
+    text-align: left;
+}
+
+.contacto-section {
+    margin-top: 17px;
+    margin-bottom: 4px;
+}
+
+.contacto-form h2, .contacto-info h2 {
+    font-size: 1.6em;
+    text-align: center;
+}  
+}
+
