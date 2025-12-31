@@ -62,8 +62,8 @@ Para a construção deste projeto, utilizei as seguintes tecnologias:
 
 ## 👩‍💻 Autora
 
-**Cláudia Machado**
-* Estudante de Desenvolvimento Front-end.
+**Claudia Machado**
+* UX/UI Designer | Estudante de Desenvolvimento Front-end.
 * [Meu GitHub](https://github.com/claudiamachado27)
 * [Meu LinkedIn](https://www.linkedin.com/in/claudiamachado27)
 
