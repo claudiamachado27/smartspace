@@ -8,7 +8,7 @@ Este projeto foi desenvolvido como parte do meu aprendizado no curso de **Desenv
 
 ## 🎓 Contexto do Projeto
 
-O **SmartSpace** é o resultado de desafios práticos propostos durante o curso, onde o foco foi transformar um layout estático em uma página web funcional e adaptável a diferentes dispositivos.
+O **SmartSpace** é o resultado de desafios práticos propostos durante o curso de Front-End, onde o foco foi transformar um layout estático em uma página web funcional e adaptável a diferentes dispositivos.
 
 ### 🎯 Objetivos de Aprendizado:
 * Aplicação de **HTML5 Semântico** para melhor acessibilidade e SEO.
